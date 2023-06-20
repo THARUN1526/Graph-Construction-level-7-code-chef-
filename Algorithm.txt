@@ -1,0 +1,20 @@
+Let's go through the code step by step to understand its functionality:
+
+1. The code begins by reading an integer value from the input, which is stored in the variable `h`. This value represents the number of test cases that will follow.
+
+2. The code then enters a loop that will execute `h` times. This loop is used to process each test case separately.
+
+3. For each test case, the code reads two integers `n` and `k` from the input. These values represent the number of vertices in a graph and the number of edges to be added to the graph, respectively.
+
+4. The variable `p` is calculated as `n * (n - 1) // 2`. This formula represents the maximum number of edges that can be present in a complete graph with `n` vertices. It is derived from the fact that each vertex can be connected to all other vertices except itself, resulting in `n - 1` edges per vertex. Since there are `n` vertices in total, the total number of edges is `(n - 1) + (n - 2) + ... + 1`, which is equivalent to `n * (n - 1) // 2`.
+
+5. The code now checks three conditions using if-elif-else statements:
+
+   a. If `k` is equal to `p`, it means that the given number of edges (`k`) is equal to the maximum number of edges (`p`) for a complete graph. In this case, the code prints the value of `k` and proceeds to print all possible edges of the complete graph. The edges are printed using nested loops that iterate over all pairs of vertices (j, z), where j ranges from 1 to n-1 and z ranges from j+1 to n. This ensures that each edge is printed only once.
+
+   b. If `k` is less than `p` and the difference between `p` and `k` is greater than or equal to `n - 1`, it means that it is possible to add `k` edges to the graph while still keeping it connected. In this case, the code calculates the number of additional edges required, which is `r = p - k`. It then prints the value of `r` and proceeds to print `r` edges that are missing in the complete graph. The missing edges are printed using nested loops similar to the previous case, but the printing is stopped once `r` edges have been printed.
+
+   c. If none of the above conditions are met, it means that it is not possible to add `k` edges to the graph while keeping it connected. In this case, the code prints `-1` to indicate that the input is invalid.
+
+6. The loop continues to the next iteration, and the process is repeated for the remaining test cases.
+
