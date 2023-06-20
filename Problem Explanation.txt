@@ -1,0 +1,17 @@
+The problem statement presents a scenario where you need to construct a connected undirected unweighted graph with N nodes such that there are exactly K unordered pairs of nodes at a distance equal to the diameter of the graph. The diameter of a graph is the largest distance between any two nodes in the graph.
+
+The input consists of multiple test cases, where each test case contains two integers N and K. You are required to process each test case separately.
+
+The output should provide the following information:
+
+1. If it is not possible to construct a valid graph, output -1.
+2. If a valid graph exists, output the number of edges in the graph (M) on a separate line.
+3. Next, output M lines, each containing two space-separated integers u and v, representing the endpoints of an edge in the graph.
+
+To solve the problem, you need to come up with a graph construction algorithm that satisfies the given conditions. The constructed graph should have N nodes and exactly K unordered pairs of nodes at the diameter distance.
+
+The example provided demonstrates the construction of a graph with N = 6 and K = 4. The output shows that the graph has 7 edges, and it lists the endpoints of each edge.
+
+The solution algorithm needs to ensure that the constructed graph fulfills the requirements stated in the problem. The graph should be connected, undirected, unweighted, and have the specified number of unordered pairs at the diameter distance.
+
+You will need to implement a solution that follows the problem constraints and generates the required output for each test case.
